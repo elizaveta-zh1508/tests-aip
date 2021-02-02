@@ -6,4 +6,9 @@ def list_of_words(two_dim_words):
     Финальное значение должно быть помещено в переменную sorted_words.
     """
 
+    one_dim = []
+    for cluster in two_dim_words:
+        one_dim.extend(cluster)
+    sorted_words = sorted(sorted(one_dim), key=len, reverse=True)
+
     return sorted_words
