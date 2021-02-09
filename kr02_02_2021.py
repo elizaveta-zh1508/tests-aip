@@ -13,7 +13,7 @@ def task_1(two_dim_words):  # можно сделать тесты
     for cluster in two_dim_words:
         one_dim.extend(cluster)
     sorted_words = sorted(sorted(one_dim), key=len, reverse=True)
-    return sorted_words
+    return tuple(sorted_words)
 
 
 def task_2(school):  # проверить вручную
