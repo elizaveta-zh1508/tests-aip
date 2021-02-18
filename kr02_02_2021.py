@@ -21,8 +21,9 @@ def task_4_1(words):
     words_2 = list(words_1.split(', '))
     if words_1.count('a') >= 2:
         a = [i.count('a') ** 2 for i in words_2]
+        res = tuple(a)
     
-    return tuple(a)
+    return res
 
 
 def task_4_2(words):  # можно сделать тесты
@@ -32,9 +33,9 @@ def task_4_2(words):  # можно сделать тесты
         Финальное значение должно быть помещено в переменную res.
         """
     words = "Alaska", "auto", "arc", "agenda", "arugula", "caveman"
-    words_2 = {len(i) for i in words if len(i) > 3}
+    res = {len(i) for i in words if len(i) > 3}
 
-    return words_2
+    return res
 
 
 def task_4_3(words):
@@ -50,7 +51,8 @@ def task_4_3(words):
             for chr in w:
                 if chr in v:
                     w = w.replace(chr,'')
-    return w
+                    res = w
+    return res
 
 
 def task_5(lst1, lst2):
@@ -59,11 +61,10 @@ def task_5(lst1, lst2):
         Переменные lst1 и lst2 - два данных списка.
         Финальное значение должно быть помещено в переменную diff.
         """
-    new_set = sorted(list(set(lst1) - set(lst2)), reverse=False)
+    diff = sorted(list(set(lst1) - set(lst2)), reverse=False)
 
 
-    return new_set
-
+    return diff
 
 def task_6(lst):
     """
@@ -73,6 +74,7 @@ def task_6(lst):
         """
     new_spisok = set(lst)
     new_spisok_1 = sorted(new_spisok, reverse=True)
+    res = tuple(new_spisok_1)
 
-    return tuple(new_spisok_1)
+    return res
 
