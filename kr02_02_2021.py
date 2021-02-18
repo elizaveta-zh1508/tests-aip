@@ -59,8 +59,8 @@ def task_5(lst1, lst2):
         Переменные lst1 и lst2 - два данных списка.
         Финальное значение должно быть помещено в переменную diff.
         """
-    new_set = sorted(list(set(spisok_1) - set(spisok_2)), reverse=False)
-    
+    new_set = sorted(list(set(lst1) - set(lst2)), reverse=False)
+
 
     return new_set
 
