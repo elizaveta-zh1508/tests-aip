@@ -17,11 +17,9 @@ def task_4_1(words):
         Переменная words - ваш кортеж слов из задания.
         Финальное значение должно быть помещено в переменную res.
         """
-    words_1 = str(words).lower()
-    words_2 = list(words_1.split(', '))
-    if words_1.count('a') >= 2:
-        a = [i.count('a') ** 2 for i in words_2]
-        res = tuple(a)
+    words_a = str(words).lower()
+    words_b = words_a.split(', ')
+    res = tuple([i.count('a') ** 2 for i in words_b if i.count('a') >= 2])
     
     return res
 
